@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  interaction_no: 1
+  advocate_id: 1
+  url: MyText
+  status: MyString
+  score: 9.99
+  magnitude: 9.99
+  sentiment: 9.99
+  detail: MyText
+
+two:
+  interaction_no: 1
+  advocate_id: 1
+  url: MyText
+  status: MyString
+  score: 9.99
+  magnitude: 9.99
+  sentiment: 9.99
+  detail: MyText

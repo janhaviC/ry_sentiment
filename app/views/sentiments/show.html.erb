@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Interaction no:</strong>
+  <%= @sentiment.interaction_no %>
+</p>
+
+<p>
+  <strong>Advocate:</strong>
+  <%= @sentiment.advocate_id %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @sentiment.url %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @sentiment.status %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @sentiment.score %>
+</p>
+
+<p>
+  <strong>Magnitude:</strong>
+  <%= @sentiment.magnitude %>
+</p>
+
+<p>
+  <strong>Sentiment:</strong>
+  <%= @sentiment.sentiment %>
+</p>
+
+<p>
+  <strong>Detail:</strong>
+  <%= @sentiment.detail %>
+</p>
+
+<%= link_to 'Edit', edit_sentiment_path(@sentiment) %> |
+<%= link_to 'Back', sentiments_path %>

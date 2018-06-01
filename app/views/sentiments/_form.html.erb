@@ -1,0 +1,57 @@
+<%= form_with(model: sentiment, local: true) do |form| %>
+  <% if sentiment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sentiment.errors.count, "error") %> prohibited this sentiment from being saved:</h2>
+
+      <ul>
+      <% sentiment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :interaction_no %>
+    <%= form.number_field :interaction_no, id: :sentiment_interaction_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :advocate_id %>
+    <%= form.number_field :advocate_id, id: :sentiment_advocate_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_area :url, id: :sentiment_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :sentiment_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.text_field :score, id: :sentiment_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :magnitude %>
+    <%= form.text_field :magnitude, id: :sentiment_magnitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sentiment %>
+    <%= form.text_field :sentiment, id: :sentiment_sentiment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detail %>
+    <%= form.text_area :detail, id: :sentiment_detail %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

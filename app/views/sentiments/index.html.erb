@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sentiments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Interaction no</th>
+      <th>Advocate</th>
+      <th>Url</th>
+      <th>Status</th>
+      <th>Score</th>
+      <th>Magnitude</th>
+      <th>Sentiment</th>
+      <th>Detail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sentiments.each do |sentiment| %>
+      <tr>
+        <td><%= sentiment.interaction_no %></td>
+        <td><%= sentiment.advocate_id %></td>
+        <td><%= sentiment.url %></td>
+        <td><%= sentiment.status %></td>
+        <td><%= sentiment.score %></td>
+        <td><%= sentiment.magnitude %></td>
+        <td><%= sentiment.sentiment %></td>
+        <td><%= sentiment.detail %></td>
+        <td><%= link_to 'Show', sentiment %></td>
+        <td><%= link_to 'Edit', edit_sentiment_path(sentiment) %></td>
+        <td><%= link_to 'Destroy', sentiment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sentiment', new_sentiment_path %>
